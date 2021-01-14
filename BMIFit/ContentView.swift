@@ -9,11 +9,21 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    
 
     var body: some View {
-        Text("Hello, World!")
-
+        TabView {
+            Text("Tab 1")
+                .tabItem {
+                    Image("FirstTabBar")
+                    Text("Calculate")
+                }
+            
+            Text("Tab 2")
+                .tabItem {
+                    Image("SecondTabBar")
+                    Text("About")
+                }
+        }
     }
 }
 
