@@ -12,17 +12,34 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            Text("Tab 1")
+            CalculateView()
                 .tabItem {
-                    Image("FirstTabBar")
+                    Image(systemName: "lineweight")
                     Text("Calculate")
                 }
             
-            Text("Tab 2")
+            AboutView()
                 .tabItem {
-                    Image("SecondTabBar")
+                    Image(systemName: "info.circle")
                     Text("About")
                 }
+        }
+    }
+}
+
+struct CalculateView: View {
+    var body: some View {
+        Color.gray
+    }
+}
+
+struct AboutView: View {
+    var body: some View {
+        VStack{
+            Image("BMI.icon")
+                .renderingMode(.original)
+            Text("The BMI (Body Mass Index), is a value derived from the mass (weight) and height of an individual, used as an indicator of the degree of obesity.")
+            Text("For more infomration and accurate measurements please consult your Nutritionist")
         }
     }
 }
